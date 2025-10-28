@@ -1,58 +1,40 @@
-# ...existing code...
-# Basic student details program
+# Student details program using lists
 
-name = input("Name: ")
-roll = input("Roll No: ")
+students = [
+    {
+        "name": "John Doe",
+        "roll": "101",
+        "marks": [85.0, 92.0, 78.0]
+    },
+    {
+        "name": "Jane Smith", 
+        "roll": "102",
+        "marks": [95.0, 88.0, 92.0]
+    }
+]
 
-m1 = float(input("Marks subject 1: "))
-m2 = float(input("Marks subject 2: "))
-m3 = float(input("Marks subject 3: "))
-
-total = m1 + m2 + m3
-avg = total / 3
-
-if avg >= 90:
-    grade = "A"
-elif avg >= 80:
-    grade = "B"
-elif avg >= 70:
-    grade = "C"
-elif avg >= 60:
-    grade = "D"
-else:
-    grade = "Fail"
-
-print(f"\nName: {name}")
-print(f"Roll No: {roll}")
-print(f"Total: {total:.2f}")
-print(f"Average: {avg:.2f}")
-print(f"Grade: {grade}")
-
-
-name = input("Name: ")
-roll = input("Roll No: ")
-
-m1 = float(input("Marks subject 1: "))
-m2 = float(input("Marks subject 2: "))
-m3 = float(input("Marks subject 3: "))
-
-total = m1 + m2 + m3
-avg = total / 3
-
-if avg >= 90:
-    grade = "A"
-elif avg >= 80:
-    grade = "B"
-elif avg >= 70:
-    grade = "C"
-elif avg >= 60:
-    grade = "D"
-else:
-    grade = "Fail"
-
-print(f"\nName: {name}")
-print(f"Roll No: {roll}")
-print(f"Total: {total:.2f}")
-print(f"Average: {avg:.2f}")
-print(f"Grade: {grade}")
-# ...existing code...
+for i, student in enumerate(students, 1):
+    name = student["name"]
+    roll = student["roll"]
+    marks = student["marks"]
+    
+    total = sum(marks)
+    avg = total / len(marks)
+    
+    if avg >= 90:
+        grade = "A"
+    elif avg >= 80:
+        grade = "B"
+    elif avg >= 70:
+        grade = "C"
+    elif avg >= 60:
+        grade = "D"
+    else:
+        grade = "Fail"
+    
+    print(f"\nStudent {i} Details:")
+    print(f"Name: {name}")
+    print(f"Roll No: {roll}")
+    print(f"Total: {total:.2f}")
+    print(f"Average: {avg:.2f}")
+    print(f"Grade: {grade}")
