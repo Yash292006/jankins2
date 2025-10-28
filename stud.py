@@ -27,10 +27,7 @@ print(f"Roll No: {roll}")
 print(f"Total: {total:.2f}")
 print(f"Average: {avg:.2f}")
 print(f"Grade: {grade}")
-# ...existing code...
-```# filepath: y:\DevOps\jankins\2.py
-# ...existing code...
-# Basic student details program
+
 
 name = input("Name: ")
 roll = input("Roll No: ")
